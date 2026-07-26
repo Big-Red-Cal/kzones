@@ -78,6 +78,16 @@ Item {
         }
     }
 
+    function restoreWindowGeometry(client) {
+        if (!checkFilter(client))
+            return;
+
+        if (config.rememberWindowGeometries && client.zone != -1 && client.oldGeometry) {
+            Utils.log("Restoring geometry for client " + client.resourceClass.toString());
+            client.frameGeometry = client.oldGeometry;
+        }
+    }
+
     function moveClientToZone(client, zone) {
         if (!checkFilter(client))
             return ;
@@ -751,6 +761,9 @@ Item {
         }
         onSnapAllWindows: {
             moveAllClientsToClosestZone();
+        }
+        onRestoreActiveWindow: {
+            restoreWindowGeometry(Workspace.activeWindow);
         }
     }
 
