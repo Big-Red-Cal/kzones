@@ -17,6 +17,7 @@ Item {
     signal moveActiveWindowRight()
     signal snapActiveWindow()
     signal snapAllWindows()
+    signal restoreActiveWindow()
 
     ShortcutHandler {
         name: "KZones: Cycle layouts"
@@ -166,6 +167,15 @@ Item {
         sequence: "Meta+Space"
         onActivated: {
             snapAllWindows();
+        }
+    }
+
+    ShortcutHandler {
+        name: "KZones: Restore active window"
+        text: "KZones: Restore active window"
+        sequence: "Meta+Backspace"
+        onActivated: {
+            restoreActiveWindow();
         }
     }
 
