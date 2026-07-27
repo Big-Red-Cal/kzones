@@ -327,6 +327,7 @@ List of all available shortcuts:
 | Move active window right                  | <kbd>Meta</kbd> + <kbd>Right</kbd>                                 |
 | Snap all windows                          | <kbd>Meta</kbd> + <kbd>Space</kbd>                                 |
 | Snap active window                        | <kbd>Meta</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd>              |
+| Restore active window                     | <kbd>Meta</kbd> + <kbd>Backspace</kbd>                             |
 
 _To change the default bindings, go to `System Settings / Shortcuts` and search for KZones_
 
